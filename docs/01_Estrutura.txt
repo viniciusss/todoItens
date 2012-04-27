@@ -1,0 +1,15 @@
+Diretorio principal ./
+	app/ Aplicao, regra de negocio.
+		models - Regras de negocio
+			domain - DDD
+		layouts - Layouts padroes do sistema.
+		controllers - Controladores
+		config - Configuracoes
+		views - Visualizacoes
+	docs - Documentacao
+	library - Bibliotecas
+	public - arquivos que vao estar acessiveis
+		static - JS, CSS, IMG, ETC
+		temp - PDF, EXCEL
+		index.php
+
