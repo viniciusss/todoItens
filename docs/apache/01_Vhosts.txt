@@ -1,0 +1,23 @@
+Configuracao do apache para funcionamento do projeto.
+	Configuracao do hosts do windows.
+		Alterar o arquivo c:\windows\system32\drivers\etc\hosts
+			adicionar a linha
+			127.0.0.1 todoitens.local
+	
+	Configuracao do apache
+		Alterar o arquivo DIR\Apache2\conf\extra\httpd-vhosts.conf
+
+		Adicionar as linhas
+			NameVirtualHost 127.0.0.1:80
+			<VirtualHost 127.0.0.1:80>
+				DocumentRoot "C:\Users\ADM\Developer\todoItens\public"
+					ServerName todoitens.local
+						<Directory "C:\Users\ADM\Developer\todoItens\public">
+								Options Indexes FollowSymLinks Includes ExecCGI
+										AllowOverride All
+												Order allow,deny
+														Allow from all
+															</Directory>
+															</VirtualHost>
+		
+		Onde: C:\Users\ADM\Developer\todoItens\public é o diretorio da aplicao
