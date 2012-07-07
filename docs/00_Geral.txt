@@ -1,0 +1,50 @@
+TodoItens:
+	
+	Sistema para gerenciar lista de tarefas, permitindo que um usuario possa gerenciar e agendar o que ele ira' fazer. O sistema tambe'm ira' possilitar o cadastro de contatos.
+
+	Entidades:
+		tarefas:
+			id, usuario, tipo da tarefa, nome, descricao, agendada, onde, quando, data hora inserido, status(Pendente, Finalizado, Cancelado);
+		usuarios:
+			id, nome, data de nascimento, empresa, email(unico), senha;
+		contatos:
+			id, usuario, nome, descricao, contatos(telefones, emails, outros);
+
+	Processos:
+		Gerenciamento de tarefas:
+			Permitir a manipulacao das tarefas de um usuario.
+			Subtarefas:
+				CRUD - D: vai mudar o status para cancelado;
+					Validacoes:
+						Se tiver a tarefa for agendada tem que dar a mensagem;
+		Gerenciamento de contatos:
+			CRUD;
+				Validacoes:
+					Tem que ter pelo menos uma forma de contato;
+
+					Validar se o telefone ou email sao validos;
+			Exportar vcard;
+
+		Cadastro de usuarios;
+			Validacoes:
+				Nao pode permitir cadastrar um telefone repetido;
+				Senha tem que ter pelo menos 6 caracteres;
+				A data de nascimento deve estar no formato correto;
+
+		Alterar informacoes pessoas;
+			Validacoes:
+				Nao permitir a alteracao do email;
+		Alterar senha;
+			Validacoes:
+				Senha tem que ter pelo menos 6 caracteres;
+
+	Ferramentas:
+		MongoDB;
+		PHP 5.4;
+		HTML 5;
+		CSS 3;
+		Twitter Bootstrap 2.0.4;
+		jQuery 1.7.2;
+		NetBeans 7.2 RC1
+		Absolute Framework 0.1;
+		GIT;
